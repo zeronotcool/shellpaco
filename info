@@ -1,0 +1,13 @@
+#!/bin/bash
+
+source colores
+
+echo -e ""
+
+echo -e "${YELLOW}CPU${NC}\t `cat /proc/cpuinfo | grep 'model name' | grep -o ': .*' | cut -d ' ' -f2-`"
+echo -e "${YELLOW}Cores${NC}\t `cat /proc/cpuinfo | grep 'cpu cores' | grep -o ': .*' | cut -d ' ' -f2-`"
+echo -e "${YELLOW}RAM${NC}\t `free -h | grep 'Mem' | awk -F' ' '{print $2}'`"
+echo -e "${YELLOW}Disco${NC}\t `df -h / | grep 'dev' | awk -F'[[:space:]]*' '{print $3}'`/`df -h / | grep 'dev' | awk -F'[[:space:]]*' '{print $2}'`"
+echo -e "${YELLOW}Kernel${NC}\t `uname -r`"
+echo -e "${YELLOW}Debian${NC}\t `cat /etc/debian_version`"
+echo -e ""

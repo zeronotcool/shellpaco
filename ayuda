@@ -1,0 +1,11 @@
+#!/bin/bash
+
+source colores
+
+echo -e ""
+echo -e "${RED}Comandos personalizados${NC}"
+echo -e ""
+echo -e "${YELLOW}ayuda${NC} muestra ayuda"
+echo -e "${YELLOW}buscar${NC} busca un archivo (pueden usarse comodines *)"
+echo -e "${YELLOW}info${NC} muestra información del sistema"
+echo -e ""
